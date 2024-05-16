@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(24, 24, 163);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #FFF;
+    padding: auto  ;
+    margin: 80px;
+    
+}
+
+.container{
+    background-color: rgba(29, 29, 31);
+    width: 950px;
+    color: #FFF;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid #FFF;
+    border-radius: 20px;
+    font-size: larger;
+    
+}
+
+.div1, .div2, .div3, .div4, .div5, .div6, .div7{
+    color: black;
+    background-color: aliceblue;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
