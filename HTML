@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+    <h1>Este é um título</h1>
+
+    <table>
+        <caption>Tabela de serviços</caption>
+        <tr>
+            <th>Ordem</th>
+            <th>serviços</th>
+            <th>Preço</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Troca de vidros</td>
+            <td>R$600</td>
+            <td>Em andamento</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Limpeza</td>
+            <td>R$150</td>
+            <td>Aguardando</td>
+        </tr>
+    </table>
+-->
+    <div class="container">
+        <h1>Reserva de Sala</h1>
+    </div>
+    <form>
+        <div class="div1">
+            <label for="data"><em><strong>Escolha a data desejada:</strong></em></label>
+            <input type="datetime-local" value="datetime-local"><br><br>
+
+            <label for="pnome"><em><strong>Nome do reservante</strong></em></label>
+            <input type="text" id="pnome" name="pnome" placeholder="Insira o nome" required/> <br> <br>
+
+            <label for="unome"><em><strong>Setor do reservante</strong></em></label>
+            <input type="text" id="unome" name="unome" placeholder="Insira o setor" required/> <br> <br>
+        </div>
+        <div class="div2">
+            <label for="sala"><em><strong>Selecione a Sala desejada:</em></strong></label>
+                <select id="sala" required>
+                    <option selected disabled value="">Selecione</option> 
+                    <option value="">Sala 01</option>
+                    <option value="">Sala 01 - com tela interativa</option>
+                    <option value="">Sala 02</option>
+                    <option value="">Sala 03</option>
+                    <option value="">Sala 04</option>
+                    <option value="">Sala 05</option>
+                    <option value="">Sala 06</option>
+                    <option value="">Sala 06 - com tela interativa</option>
+                    <option value="">Sala 07</option> 
+                    <option value="">Estúdio</option> 
+                    <option value="">PodCast</option> 
+                </select> <br> <br>
+                
+            <label for="choice"><strong><em>Precisa de TV ou Tela Interativa Móvel?</em></strong></label>
+                <select id="choice" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="">Sim</option>
+                    <option value="">Não</option>
+                </select> <br> <br>
+
+            <label for="apoio"><strong><em>Precisa de Monitor(a)?</em></strong></label> 
+                <select id="apoio" required> 
+                    <option selected disabled value="">Selecione</option>
+                    <option value="">Sim</option>
+                    <option value="">Não</option>
+                </select>
+                <label for="monitor">
+                    <strong><em>Se "sim", cite qual será relacionado(a):</em></strong>
+                    <input type="text" value="" placeholder="Nome">
+                </label>     
+        </div>
+        <div class="div3">
+            <label for="motivo">
+                <strong><em>Motivo da reserva de sala:</em></strong></label>
+                <label>
+                    <select id="motivo" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="">Gravação de aula *</option>
+                        <option value="">Reunião/Evento</option>
+                        <option value="">Curso PDH</option>
+                        <option value="">Entrevista</option>
+                    </select>
+                </label>
+        </div>
+        <div class="div4">
+            <label for="local">
+                <strong><em>Selecione o local (cidade):</em></strong></label> 
+                <label>
+                    <select id="local" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="">Santa Cruz do Sul/RS</option>
+                        <option value="">Porto Alegre/RS</option>
+                        <option value="">Santa Maria/RS</option>
+                        <option value="">São Paulo/SP</option>
+                    </select>
+            </label>
+        </div>
+        <div class="div5">
+            <label for="materia">
+                <strong><em>*Obs: Em caso de gravação de aula, selecione a área:</em></strong>  <!-- required if condição "gravação de aula" selected-->
+            </label>
+                    <select id="materia" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="">Penal</option>
+                        <option value="">Trabalho</option>
+                        <option value="">Tributário</option>
+                        <option value="">Civil</option>
+                        <option value="">Constitucional</option>
+                        <option value="">Empresarial</option>
+                        <option value="">Administrativo</option> 
+                        <option value="">Concurso</option> 
+                        <option value="">Pós-Graduação</option> 
+                        <option value="">Prática</option> 
+                    </select> 
+        </div>
+        <div class="div6">
+                <label for="teacher">
+                    <strong><em>*Obs: Selecione o(a) professor(a):</em></strong> <!-- required if condição "gravação de aula" selected-->
+                </label>
+                    <select id="teacher" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option value="">Nidal Ahmad</option>
+                        <option value="">Arnaldo Quaresma</option>
+                        <option value="">Leticia das Neves</option>
+                        <option value="">Mauro Stumer</option>
+                        <option value="">Luiz Henrique Dutra</option>
+                        <option value="">Cleize Kohls</option>
+                        <option value="">Guilherme da Silva</option>
+                        <option value="">Matheus De Gregori</option>
+                        <option value="">Leonardo Fetter</option>
+                        <option value="">Maitê Teixeira</option>
+                        <option value="">Tatiane Kipper</option>
+                        <option value="">Patrícia Strauss</option>
+                        <option value="">Caroline Bitencourt</option>
+                        <option value="">Mateus Silveira</option>
+                        <option value="">Janriê Reck</option>
+                        <option value="">Douglas de Azevedo</option>
+                        <option value="">Luciana Aranalde</option>
+                        <option value="">Cristiane Pauli</option>
+                        <option value="">Franciele Kuhl/option>
+                        <option value="">Maria Valentina</option>
+                        <option value="">Matheus</option>
+                        <option value="">Outro(s)</option> <!-- if condição "outros(s)" selected abre novo campo-->
+                    </select>
+                <label for="outro">
+                    <strong><em>Se "outro(s)", cite qual(is):</em></strong>
+                    <input type="text" value="" placeholder="Nome(s)">
+                </label>     
+        </div>
+        <div class="div7">
+            <input type="submit" value="Confirmar reserva">
+        </div>
+    </form>
+</body>
+</html>
